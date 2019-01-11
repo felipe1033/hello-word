@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daw'sapp Project</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- GOOGLE FONTS-->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+
+<!-- FONT AWESOME --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<!-- FAVICON -->
+  <link rel="icon" href="./images/whatsapp-logo-rojo.png" sizes="16x16" type="image/png">
+
+<!--own css-->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div id="container">
+    <h2>Chat en línea</h2>
+    <hr>
+    <ul class="col-md-12">
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar1.png" alt="avatar"></a></li>
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar2.png" alt="avatar"></a></li>
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar3.png" alt="avatar"></a></li>
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar4.png" alt="avatar"></a></li>
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar5.png" alt="avatar"></a></li>
+      <li class="col-md-2"><a ><img class="choice" src="./images/avatar6.png" alt="avatar"></a></li>
+    </ul>
+    <div class="searchbox1">
+      <input type="search" class="col-md-10 col-md-offset-1 acceso" placeholder="Escribe aquí tu apodo">
+      <i class="fa fa-user-o" aria-hidden="true"></i> 
+    </div>
+    <div class="searchbox2">
+      <input type="search" class="col-md-10 col-md-offset-1 acceso2" placeholder="Comparte algo con los demás...">
+      <i class="fa fa-commenting-o" aria-hidden="true"></i> 
+    </div>
+
+    <p id="disp"><small><!-- Nombre de usuario no disponible --></small></p>
+    <a class="entry"><button class="btn btn-default introChat">Entrar</button></a>
+  </div><!-- container -->
+  <div id="app" style='display:none'>
+    <div class="row primera">
+      <div class="col-md-3 header">&nbsp;</div>
+      <div class="col-md-9 header">Canal General</div>
+    </div>
+    <div class="row segunda">
+      <div class="col-md-3 people">
+        <!-- <div class="searchbox">
+          <input id="busq" type="search" class="col-md-10 col-md-offset-1" placeholder="Empezar un nuevo chat">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div> -->
+        <div class="listausuarios">
+
+        </div><!-- listausuarios -->
+      </div><!--.people-->
+      <div class="col-md-9 chat">
+        <div class="listamensajes">
+          
+        </div><!--listamensajes-->
+        <form class="sendmessage col-md-12">
+          <input id="sendm" type="text" class="col-md-11 col-md-offset-1" placeholder="Escribe un mensaje aquí" autocomplete="off">
+        </form>
+      </div><!--chat-->
+    </div>
+
+
+  </div><!-- #app -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="./codigo.js"></script>
+</body>
+</html>
